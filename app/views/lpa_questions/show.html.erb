@@ -1,0 +1,29 @@
+
+<p>
+  <strong>Title:</strong>
+  <%= @lpa_question.title %>
+</p>
+
+<p>
+  <strong>Survey:</strong>
+  <%= @lpa_question.survey %>
+</p>
+
+<p>
+  <strong>Question type:</strong>
+  <%= @lpa_question.question_type %>
+</p>
+
+<p>
+  <strong>Sort:</strong>
+  <%= @lpa_question.sort %>
+</p>
+
+<p>
+  <strong>Active status:</strong>
+  <%= @lpa_question.active_status %>
+</p>
+
+<br>
+<%= link_to 'Edit', edit_lpa_question_path(@lpa_question), class: "btn btn-primary", :style=>'color:#FFFFFF;' %> &nbsp &nbsp
+<%= link_to 'Back', lpa_questions_path, class: "btn btn-default" %>

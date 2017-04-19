@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
  
 
+  resources :lpa_surveys
+  resources :lpa_questions
+  resources :lpa_answers
   resources :products
   resources :product_features
   resources :pfeatures

@@ -1,0 +1,29 @@
+
+<p>
+  <strong>Body:</strong>
+  <%= @lpa_answer.body %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @lpa_answer.user %>
+</p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @lpa_answer.question %>
+</p>
+
+<p>
+  <strong>Issue description:</strong>
+  <%= @lpa_answer.issue_description %>
+</p>
+
+<p>
+  <strong>Action taken:</strong>
+  <%= @lpa_answer.action_taken %>
+</p>
+
+<br>
+<%= link_to 'Edit', edit_lpa_answer_path(@lpa_answer), class: "btn btn-primary", :style=>'color:#FFFFFF;' %> &nbsp &nbsp
+<%= link_to 'Back', lpa_answers_path, class: "btn btn-default" %>

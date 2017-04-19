@@ -1,0 +1,2 @@
+module LpaAnswersHelper
+end

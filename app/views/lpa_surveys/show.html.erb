@@ -1,0 +1,24 @@
+
+<p>
+  <strong>Title:</strong>
+  <%= @lpa_survey.title %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @lpa_survey.user %>
+</p>
+
+<p>
+  <strong>Sort:</strong>
+  <%= @lpa_survey.sort %>
+</p>
+
+<p>
+  <strong>Active status:</strong>
+  <%= @lpa_survey.active_status %>
+</p>
+
+<br>
+<%= link_to 'Edit', edit_lpa_survey_path(@lpa_survey), class: "btn btn-primary", :style=>'color:#FFFFFF;' %> &nbsp &nbsp
+<%= link_to 'Back', lpa_surveys_path, class: "btn btn-default" %>
