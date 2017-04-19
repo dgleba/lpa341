@@ -1,0 +1,18 @@
+<div class='nested-fields'>
+    <div class="field">
+      <%= f.label :title  %>
+      <%= f.text_field :title %>
+    </div>
+    <%= link_to_remove_association " Remove Question", f %>
+  </div>
+  
+  <h3>Answers</h3>
+  <div id='lpa_answers'>
+    <%= f.fields_for :lpa_answers do |b| %>
+      <%= render 'lpa_answer_fields', :f => b %>
+    <% end %>
+    <div class='links'>
+      <%= link_to_add_association 'ADD answer', f, :lpa_answers %>
+    </div>
+  </div>
+ 

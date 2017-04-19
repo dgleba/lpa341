@@ -66,6 +66,6 @@ before_filter :authenticate_user!
 
   # Only allow a trusted parameter "white list" through.
   def lpa_answer_params
-    params.require(:lpa_answer).permit(:body, :user_id, :question_id, :issue_description, :action_taken)
+    params.require(:lpa_answer).permit(:body, :user_id, :lpa_question_id, :issue_description, :action_taken)
   end
 end

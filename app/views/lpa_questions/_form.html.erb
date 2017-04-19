@@ -19,9 +19,9 @@
       </div>
         </div>
   <div class="form-group">
-            <%= f.label :survey_id, class: "col-sm-2 control-label" %>
+            <%= f.label :lpa_survey_id, class: "col-sm-2 control-label" %>
         <div class="col-sm-10">
-          <%= f.collection_select :survey_id, Survey.all, :id, :name,  { prompt: true }, { :class => 'dgselect2' }  %>
+          <%= f.collection_select :lpa_survey_id, LpaSurvey.all, :id, :title,  { prompt: true }, { :class => 'dgselect2' }  %>
         </div>
     </div>
   <div class="form-group">
@@ -43,6 +43,9 @@
       </div>
         </div>
 
+          
+ 
+  
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
       <%= f.submit class: "btn btn-primary" %>

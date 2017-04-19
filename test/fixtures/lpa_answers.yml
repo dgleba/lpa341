@@ -3,13 +3,13 @@
 one:
   body: MyText
   user_id: 
-  question_id: 
+  lpa_question_id: 
   issue_description: MyText
   action_taken: MyText
 
 two:
   body: MyText
   user_id: 
-  question_id: 
+  lpa_question_id: 
   issue_description: MyText
   action_taken: MyText

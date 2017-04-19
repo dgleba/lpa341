@@ -2,14 +2,14 @@
 
 one:
   title: MyString
-  survey_id: 
+  lpa_survey_id: 
   question_type: 1
   sort: 1
   active_status: 1
 
 two:
   title: MyString
-  survey_id: 
+  lpa_survey_id: 
   question_type: 1
   sort: 1
   active_status: 1

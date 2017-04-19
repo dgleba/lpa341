@@ -18,7 +18,7 @@ class LpaAnswersControllerTest < ActionController::TestCase
 
   test "should create lpa_answer" do
     assert_difference('LpaAnswer.count') do
-      post :create, lpa_answer: { action_taken: @lpa_answer.action_taken, body: @lpa_answer.body, issue_description: @lpa_answer.issue_description, question_id: @lpa_answer.question_id, user_id: @lpa_answer.user_id }
+      post :create, lpa_answer: { action_taken: @lpa_answer.action_taken, body: @lpa_answer.body, issue_description: @lpa_answer.issue_description, lpa_question_id: @lpa_answer.lpa_question_id, user_id: @lpa_answer.user_id }
     end
 
     assert_redirected_to lpa_answer_path(assigns(:lpa_answer))
@@ -35,7 +35,7 @@ class LpaAnswersControllerTest < ActionController::TestCase
   end
 
   test "should update lpa_answer" do
-    patch :update, id: @lpa_answer, lpa_answer: { action_taken: @lpa_answer.action_taken, body: @lpa_answer.body, issue_description: @lpa_answer.issue_description, question_id: @lpa_answer.question_id, user_id: @lpa_answer.user_id }
+    patch :update, id: @lpa_answer, lpa_answer: { action_taken: @lpa_answer.action_taken, body: @lpa_answer.body, issue_description: @lpa_answer.issue_description, lpa_question_id: @lpa_answer.lpa_question_id, user_id: @lpa_answer.user_id }
     assert_redirected_to lpa_answer_path(assigns(:lpa_answer))
   end
 

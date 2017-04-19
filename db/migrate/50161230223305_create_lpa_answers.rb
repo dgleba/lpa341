@@ -3,7 +3,7 @@ class CreateLpaAnswers < ActiveRecord::Migration
     create_table :lpa_answers do |t|
       t.text :body
       t.references :user, index: true, foreign_key: true
-      t.references :question, index: true, foreign_key: true
+      t.references :lpa_question, index: true, foreign_key: true
       t.text :issue_description
       t.text :action_taken
 

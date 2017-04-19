@@ -18,7 +18,7 @@ class LpaQuestionsControllerTest < ActionController::TestCase
 
   test "should create lpa_question" do
     assert_difference('LpaQuestion.count') do
-      post :create, lpa_question: { active_status: @lpa_question.active_status, question_type: @lpa_question.question_type, sort: @lpa_question.sort, survey_id: @lpa_question.survey_id, title: @lpa_question.title }
+      post :create, lpa_question: { active_status: @lpa_question.active_status, lpa_survey_id: @lpa_question.lpa_survey_id, question_type: @lpa_question.question_type, sort: @lpa_question.sort, title: @lpa_question.title }
     end
 
     assert_redirected_to lpa_question_path(assigns(:lpa_question))
@@ -35,7 +35,7 @@ class LpaQuestionsControllerTest < ActionController::TestCase
   end
 
   test "should update lpa_question" do
-    patch :update, id: @lpa_question, lpa_question: { active_status: @lpa_question.active_status, question_type: @lpa_question.question_type, sort: @lpa_question.sort, survey_id: @lpa_question.survey_id, title: @lpa_question.title }
+    patch :update, id: @lpa_question, lpa_question: { active_status: @lpa_question.active_status, lpa_survey_id: @lpa_question.lpa_survey_id, question_type: @lpa_question.question_type, sort: @lpa_question.sort, title: @lpa_question.title }
     assert_redirected_to lpa_question_path(assigns(:lpa_question))
   end
 

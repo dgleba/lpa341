@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 50161230223301) do
+ActiveRecord::Schema.define(version: 50161230223306) do
 
   create_table "country_of_origins", force: :cascade do |t|
     t.string   "name"
@@ -21,6 +21,42 @@ ActiveRecord::Schema.define(version: 50161230223301) do
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
+
+  create_table "lpa_answers", force: :cascade do |t|
+    t.text     "body"
+    t.integer  "user_id"
+    t.integer  "lpa_question_id"
+    t.text     "issue_description"
+    t.text     "action_taken"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  add_index "lpa_answers", ["lpa_question_id"], name: "index_lpa_answers_on_lpa_question_id"
+  add_index "lpa_answers", ["user_id"], name: "index_lpa_answers_on_user_id"
+
+  create_table "lpa_questions", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "lpa_survey_id"
+    t.integer  "question_type"
+    t.integer  "sort"
+    t.integer  "active_status"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "lpa_questions", ["lpa_survey_id"], name: "index_lpa_questions_on_lpa_survey_id"
+
+  create_table "lpa_surveys", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "user_id"
+    t.integer  "sort"
+    t.integer  "active_status"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "lpa_surveys", ["user_id"], name: "index_lpa_surveys_on_user_id"
 
   create_table "pfeatures", force: :cascade do |t|
     t.string   "name"
