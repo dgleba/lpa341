@@ -62,3 +62,4 @@ gem 'jwt'
 gem "cancancan"
 gem 'rails_admin'
 gem 'select2-rails'
+gem 'cocoon'
